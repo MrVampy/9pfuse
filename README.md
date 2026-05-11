@@ -13,7 +13,9 @@ Local changes currently include:
 - explicit `-u uname` attach principal selection;
 - Linux-safe synthetic inode numbers;
 - missing-path errno mapping for FUSE create flows;
-- POSIX file-over-file rename bridging for editor temp-file saves.
+- POSIX file-over-file rename bridging for editor temp-file saves;
+- large FUSE write negotiation for mounted workspace copies, while 9P writes
+  are still split at the negotiated 9P msize by lib9pclient.
 
 ## Build
 
