@@ -13,6 +13,9 @@ Local changes currently include:
 - explicit `-u uname` attach principal selection;
 - Linux-safe synthetic inode numbers;
 - missing-path errno mapping for FUSE create flows;
+- command-file truncate fallback, so shell redirection to writable namespace
+  command files can proceed when the 9P server accepts writes but rejects
+  truncation as a non-command operation;
 - POSIX file-over-file rename bridging for editor temp-file saves;
 - large FUSE write negotiation for mounted workspace copies, while 9P writes
   are still split at the negotiated 9P msize by lib9pclient.
