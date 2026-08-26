@@ -47,5 +47,7 @@
         type = "app";
         program = "${self.packages.${system}.default}/bin/9pfuse";
       };
+
+      checks.${system}.package = self.packages.${system}.default;
     };
 }
